@@ -419,8 +419,6 @@ img {
   display: block;
 }
 .projects-link:hover {
-  /* border: 1px solid var(--border-color);
-  box-sizing: border-box; */
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -440,4 +438,43 @@ img {
   line-height: 1.88;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color-medium);
+}
+
+/* ====== Модальное окно ======= */
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 528px;
+  min-height: 581px;
+  border-radius: 4px;
+  background-color: var(--tertiary-text-color-lite);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.modal-btn-close {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: var(--tertiary-text-color-lite);
 }
