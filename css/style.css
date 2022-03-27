@@ -124,9 +124,21 @@ img {
 .nav-list-link,
 .contact-mail-link,
 .contact-tel-link {
+  position: relative;
   color: currentColor;
   display: flex;
 }
+.nav-list-active.nav-list-link::after {
+  content: "";
+  height: 4px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -33px;
+  background-image: url("../images/svg/hover.svg");
+}
+
 .icon-envelope {
   margin-right: 10px;
   fill: currentColor;
@@ -240,8 +252,23 @@ img {
   margin-left: -30px;
 }
 .our-work-item {
+  position: relative;
   flex-basis: calc((100% - 90px) / 3);
   margin-left: 30px;
+}
+.our-work-label {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  font-size: 14px;
+  line-height: 1.14em;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--tertiary-text-color-lite);
+  background: rgba(47, 48, 58, 0.8);
 }
 
 /* ===== Наша команда ====== */
